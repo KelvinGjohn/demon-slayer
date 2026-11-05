@@ -1,0 +1,194 @@
+:root {
+    --text-red: #b11226;
+    --white: #ffffff;
+    --bg-light: #ececec;
+    --bg-dark: #4c4c4e;
+}
+
+:root {
+    --font-heading: 'Orbitron', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #b11226, #000);
+    color: var(--white);
+    padding: 4rem 0;
+}
+
+header p.lead {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header p.sub {
+    opacity: 0.6;
+}
+
+nav {
+    background-color: var(--bg-light);
+    padding: 1rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li::after {
+    content: "⚔";
+}
+
+nav ul li:last-child::after {
+    content: "";
+}
+
+nav ul li a {
+    color: var(--text-red);
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 0.5rem;
+}
+
+main {
+    padding: 1rem 0;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 0.5rem;
+}
+
+.flexbox-columns {
+    display: flex;
+    gap: 1rem;
+}
+
+.flexbox-columns article {
+    flex: 2;
+}
+
+.flexbox-columns aside {
+    flex: 1;
+}
+
+/* TABLE BASE */
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--bg-dark);
+    width: 100%;
+}
+
+/* remove default inner borders */
+table th, 
+table td {
+    border-width: 0;
+}
+
+/* add bottom & right borders + padding */
+table tr th, 
+table tr td {
+    border-bottom: 1px solid var(--bg-dark);
+    border-right: 1px solid var(--bg-dark);
+    padding: 0.25rem 0.5rem;
+}
+
+/* remove right border on last column */
+table tr th:last-child, 
+table tr td:last-child {
+    border-right: none;
+}
+
+/* remove bottom border on last row */
+table tr:last-child th, 
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* header styling */
+table tr th {
+    text-align: left;
+    background-color: var(--text-red);
+    color: var(--white);
+}
+
+table tr:nth-of-type(odd) td {
+    background-color: var(--bg-light);
+}
+
+table tr:hover td {
+    background-color: var(--text-green);
+    color: var(--white);
+}
+
+.related-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.related-panel img {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+
+    .flexbox-columns {
+        flex-direction: column;
+    }
+
+    .related-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
