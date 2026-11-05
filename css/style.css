@@ -1,14 +1,15 @@
+/* ===== Theme variables ===== */
 :root {
     --text-red: #b11226;
+    --text-main: #222222;
+    --text-green: #1f7a4d;
     --white: #ffffff;
     --bg-light: #ececec;
     --bg-dark: #4c4c4e;
-}
-
-:root {
     --font-heading: 'Orbitron', sans-serif;
 }
 
+/* ===== Base ===== */
 h1, h2, h3 {
     font-family: var(--font-heading);
     letter-spacing: 1px;
